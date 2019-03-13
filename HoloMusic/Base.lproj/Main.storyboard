@@ -67,28 +67,13 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yuI-Nc-VKd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                                <color key="backgroundColor" red="0.32943312320000001" green="0.85162188569999997" blue="0.91357674870000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.055383760650000002" green="0.15679948990000001" blue="0.26388439120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0i-Qf-fSL">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VED-L6-Ags">
-                                        <rect key="frame" x="0.0" y="0.0" width="35.5" height="44"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="VED-L6-Ags" secondAttribute="height" multiplier="29:36" id="g1X-O3-kmq"/>
-                                        </constraints>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <action selector="btnBack:" destination="zVp-PO-paf" eventType="touchUpInside" id="TJB-OD-5aC"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.32943312315515827" green="0.85162188571266884" blue="0.91357674870466321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.057466834430000002" green="0.15980182900000001" blue="0.26388439120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="CHD-Wp-nMA"/>
-                                    <constraint firstAttribute="bottom" secondItem="VED-L6-Ags" secondAttribute="bottom" id="R9L-Zb-Hy4"/>
-                                    <constraint firstItem="VED-L6-Ags" firstAttribute="leading" secondItem="t0i-Qf-fSL" secondAttribute="leading" id="UZ2-wu-4Wp"/>
-                                    <constraint firstItem="VED-L6-Ags" firstAttribute="top" secondItem="t0i-Qf-fSL" secondAttribute="top" id="tot-7w-okI"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GAA-6h-hSL">
@@ -367,14 +352,30 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VED-L6-Ags">
+                                                <rect key="frame" x="15" y="10" width="25" height="25"/>
+                                                <color key="backgroundColor" red="0.055383760650000002" green="0.15679948990000001" blue="0.26388439120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="VED-L6-Ags" secondAttribute="height" multiplier="1:1" id="R7G-Ww-3jb"/>
+                                                    <constraint firstAttribute="width" constant="25" id="XJY-nE-hWA"/>
+                                                </constraints>
+                                                <state key="normal" image="arrow-down">
+                                                    <color key="titleShadowColor" red="0.055383760650000002" green="0.15679948990000001" blue="0.26388439120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnBack:" destination="zVp-PO-paf" eventType="touchUpInside" id="TJB-OD-5aC"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.057466834430000002" green="0.15980182900000001" blue="0.26388439120000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="NIx-w0-zPS" firstAttribute="top" secondItem="cXN-ta-HYF" secondAttribute="bottom" constant="10" id="Oga-k3-35t"/>
                                             <constraint firstItem="cXN-ta-HYF" firstAttribute="top" secondItem="cxl-nX-paK" secondAttribute="top" constant="10" id="P72-a0-2Lb"/>
                                             <constraint firstItem="AES-Rq-tWK" firstAttribute="top" secondItem="NIx-w0-zPS" secondAttribute="bottom" constant="10" id="SGE-Ia-sb8"/>
+                                            <constraint firstItem="VED-L6-Ags" firstAttribute="leading" secondItem="cxl-nX-paK" secondAttribute="leading" constant="15" id="SfA-Ea-uuy"/>
                                             <constraint firstItem="NIx-w0-zPS" firstAttribute="centerX" secondItem="cXN-ta-HYF" secondAttribute="centerX" id="bYD-7y-5Ms"/>
                                             <constraint firstItem="cXN-ta-HYF" firstAttribute="centerX" secondItem="cxl-nX-paK" secondAttribute="centerX" id="biu-aR-t24"/>
+                                            <constraint firstItem="VED-L6-Ags" firstAttribute="top" secondItem="cXN-ta-HYF" secondAttribute="top" id="fyr-6w-sgL"/>
                                             <constraint firstAttribute="height" constant="100" id="nYL-HC-JBg"/>
                                             <constraint firstItem="AES-Rq-tWK" firstAttribute="centerX" secondItem="NIx-w0-zPS" secondAttribute="centerX" id="wbv-d0-yI9"/>
                                         </constraints>
@@ -472,6 +473,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow-down" width="24" height="24"/>
         <image name="bookmark" width="14" height="18"/>
         <image name="for" width="25" height="14"/>
         <image name="img.png" width="375" height="482"/>
