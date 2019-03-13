@@ -12,6 +12,7 @@ class DetailTableCell: UITableViewCell {
 
     @IBOutlet weak var imageAnh: UIImageView!
     
+    @IBOutlet weak var lblCs: UILabel!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblNuber: UILabel!
     @IBOutlet weak var img: UIImageView!
@@ -19,7 +20,9 @@ class DetailTableCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    @IBAction func btn(_ sender: Any) {
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
