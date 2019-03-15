@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SDWebImage
+
 
 struct Song {
     var thumbnail: UIImage?
@@ -18,61 +20,58 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     
     var number = ["1","2","3","4","5","6"]
     var imgMp3 = ["h1","h2","h3","h4","h5","h6"]
+    var lstPlaylis = [SongModel]()
     
-    var data: [Song] = []
+//    var data: [Song] = []
 
     @IBOutlet weak var tableview: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        data = [Song(thumbnail: UIImage(named: "h1"), title: "Hello", artist: "Tuan Hung"),
-                Song(thumbnail: UIImage(named: "h2"), title: "Gia nhu", artist:"Dan Truong"),
-                Song(thumbnail: UIImage(named: "h3"), title: "Anh khac Hay em khac", artist: "Dan Phuong"),
-                Song(thumbnail: UIImage(named: "h4"), title: "Neu em di", artist: "My Tam"),
-                Song(thumbnail: UIImage(named: "h5"), title: "Minh tung quen nhau", artist: "Long Duc"),
-                Song(thumbnail: UIImage(named: "h6"), title: "Trang giay trang", artist: "Pham Truong")]
-        
         tableview.delegate = self
         tableview.dataSource = self
+        getApi(prams: ["":""])
        
-        tableview.register(UINib (nibName: "HeaderTableCell", bundle: nil), forCellReuseIdentifier: "HeaderTableCell")
         tableview.register(UINib (nibName: "DetailTableCell", bundle: nil), forCellReuseIdentifier: "DetailTableCell")
     }
     
+    func getApi(prams:NSDictionary)  {
+        DataViewMdel.getApiMpp3(params: prams) { (lstSong, error) in
+            self.lstPlaylis = lstSong
+            self.tableview.reloadData()
+        }
+    
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
+        if lstPlaylis != nil{
+            return lstPlaylis.count
+        }
+        return 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableCell", for: indexPath) as! DetailTableCell
-//        cell.imageAnh.image = UIImage(named: img[indexPath.row])
-        let obj = data[indexPath.row]
-        cell.img.image = obj.thumbnail
-        cell.lblCs.text = obj.artist
-        cell.lblName.text = obj.title
-        cell.lblNuber.text = number[indexPath.row]
+        let obj = lstPlaylis[indexPath.row]
+        cell.lblCs.text = obj.singer
+        cell.lblName.text = obj.name
+        cell.img.sd_setImage(with: URL(string: obj.avatar))
+        cell.lblNuber.text = "\(indexPath.row + 1)"
         
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "HeaderTableCell") as! HeaderTableCell
-       return cell
-        
-    }
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 60
+        return 0.01
     }
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
     }
-    
-
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-        vc.imgMp3 = imgMp3
-//        self.navigationController?.pushViewController(mh, animated: true)
+//        vc.playLists = self.lstPlaylis[indexPath.row]
         self.navigationController?.present(vc, animated: true, completion: nil)
 
     }

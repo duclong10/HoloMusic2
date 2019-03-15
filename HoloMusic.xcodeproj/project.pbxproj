@@ -3,12 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B57C5CBC9996A8D3C63368A /* Pods_HoloMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2EDF467496AD97F1097869E /* Pods_HoloMusicTests.framework */; };
+		CC26145515D3369769F73940 /* Pods_HoloMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD62E50C10572E0978EB903 /* Pods_HoloMusicUITests.framework */; };
+		F3E3B108E9C6F8CE5CA0AB43 /* Pods_HoloMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF39C34BC072822C903D630F /* Pods_HoloMusic.framework */; };
+		FF5267AD223A37DF009EC8F4 /* Mp3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5267AC223A37DF009EC8F4 /* Mp3ViewController.swift */; };
 		FFCB447E223825C3000D8483 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB447C223825C3000D8483 /* CollectionCell.swift */; };
 		FFCB447F223825C3000D8483 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCB447D223825C3000D8483 /* CollectionCell.xib */; };
+		FFD0E413223A5B0A002F4FAD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0E412223A5B0A002F4FAD /* APIService.swift */; };
+		FFD0E416223A5CA7002F4FAD /* SongsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0E415223A5CA7002F4FAD /* SongsModel.swift */; };
+		FFD0E419223A5F20002F4FAD /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0E418223A5F20002F4FAD /* Common.swift */; };
+		FFD0E41C223A61D0002F4FAD /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0E41B223A61CF002F4FAD /* Enum.swift */; };
+		FFD0E41F223A62EC002F4FAD /* DataViewMdel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0E41E223A62EC002F4FAD /* DataViewMdel.swift */; };
 		FFF35C58223785C8000C3A1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF35C57223785C8000C3A1C /* AppDelegate.swift */; };
 		FFF35C5A223785C8000C3A1C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF35C59223785C8000C3A1C /* ViewController.swift */; };
 		FFF35C5D223785C8000C3A1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C5B223785C8000C3A1C /* Main.storyboard */; };
@@ -18,8 +27,6 @@
 		FFF35C78223785CF000C3A1C /* HoloMusicUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF35C77223785CF000C3A1C /* HoloMusicUITests.swift */; };
 		FFF35C8622378705000C3A1C /* img.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C8522378704000C3A1C /* img.png */; };
 		FFF35C8822378AAE000C3A1C /* search-bar.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C8722378AAE000C3A1C /* search-bar.png */; };
-		FFF35C8B22378B96000C3A1C /* HeaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF35C8922378B96000C3A1C /* HeaderTableCell.swift */; };
-		FFF35C8C22378B96000C3A1C /* HeaderTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C8A22378B96000C3A1C /* HeaderTableCell.xib */; };
 		FFF35C9022378C45000C3A1C /* DetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF35C8E22378C44000C3A1C /* DetailTableCell.swift */; };
 		FFF35C9122378C45000C3A1C /* DetailTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C8F22378C44000C3A1C /* DetailTableCell.xib */; };
 		FFF35C9822378CEC000C3A1C /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C9222378CEB000C3A1C /* 5.png */; };
@@ -49,8 +56,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		09492C0486E4D5F62A0F5490 /* Pods-HoloMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloMusic.debug.xcconfig"; path = "Target Support Files/Pods-HoloMusic/Pods-HoloMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		7378C7C25E9CF3E47BD37D4D /* Pods-HoloMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloMusicTests.debug.xcconfig"; path = "Target Support Files/Pods-HoloMusicTests/Pods-HoloMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E4C0E9252E9786DB2E878DE /* Pods-HoloMusicUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloMusicUITests.debug.xcconfig"; path = "Target Support Files/Pods-HoloMusicUITests/Pods-HoloMusicUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A06A123AB6E85CFC4F2E5F00 /* Pods-HoloMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloMusic.release.xcconfig"; path = "Target Support Files/Pods-HoloMusic/Pods-HoloMusic.release.xcconfig"; sourceTree = "<group>"; };
+		A2B8E8F7DFB391CAE9054260 /* Pods-HoloMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloMusicTests.release.xcconfig"; path = "Target Support Files/Pods-HoloMusicTests/Pods-HoloMusicTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1694D6B2981CC066FAD9814 /* Pods-HoloMusicUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloMusicUITests.release.xcconfig"; path = "Target Support Files/Pods-HoloMusicUITests/Pods-HoloMusicUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C2EDF467496AD97F1097869E /* Pods_HoloMusicTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloMusicTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD62E50C10572E0978EB903 /* Pods_HoloMusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloMusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF39C34BC072822C903D630F /* Pods_HoloMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5267AC223A37DF009EC8F4 /* Mp3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp3ViewController.swift; sourceTree = "<group>"; };
 		FFCB447C223825C3000D8483 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		FFCB447D223825C3000D8483 /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		FFD0E412223A5B0A002F4FAD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FFD0E415223A5CA7002F4FAD /* SongsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsModel.swift; sourceTree = "<group>"; };
+		FFD0E418223A5F20002F4FAD /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FFD0E41B223A61CF002F4FAD /* Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		FFD0E41E223A62EC002F4FAD /* DataViewMdel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewMdel.swift; sourceTree = "<group>"; };
 		FFF35C54223785C8000C3A1C /* HoloMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HoloMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFF35C57223785C8000C3A1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFF35C59223785C8000C3A1C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,8 +88,6 @@
 		FFF35C79223785CF000C3A1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFF35C8522378704000C3A1C /* img.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img.png; sourceTree = "<group>"; };
 		FFF35C8722378AAE000C3A1C /* search-bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search-bar.png"; sourceTree = "<group>"; };
-		FFF35C8922378B96000C3A1C /* HeaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableCell.swift; sourceTree = "<group>"; };
-		FFF35C8A22378B96000C3A1C /* HeaderTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderTableCell.xib; sourceTree = "<group>"; };
 		FFF35C8E22378C44000C3A1C /* DetailTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableCell.swift; sourceTree = "<group>"; };
 		FFF35C8F22378C44000C3A1C /* DetailTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableCell.xib; sourceTree = "<group>"; };
 		FFF35C9222378CEB000C3A1C /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
@@ -84,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3E3B108E9C6F8CE5CA0AB43 /* Pods_HoloMusic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B57C5CBC9996A8D3C63368A /* Pods_HoloMusicTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,12 +120,61 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC26145515D3369769F73940 /* Pods_HoloMusicUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6D43C1CAC5B3FF66873137E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF39C34BC072822C903D630F /* Pods_HoloMusic.framework */,
+				C2EDF467496AD97F1097869E /* Pods_HoloMusicTests.framework */,
+				EDD62E50C10572E0978EB903 /* Pods_HoloMusicUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C44766CC4A005C5FEB0D81F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09492C0486E4D5F62A0F5490 /* Pods-HoloMusic.debug.xcconfig */,
+				A06A123AB6E85CFC4F2E5F00 /* Pods-HoloMusic.release.xcconfig */,
+				7378C7C25E9CF3E47BD37D4D /* Pods-HoloMusicTests.debug.xcconfig */,
+				A2B8E8F7DFB391CAE9054260 /* Pods-HoloMusicTests.release.xcconfig */,
+				8E4C0E9252E9786DB2E878DE /* Pods-HoloMusicUITests.debug.xcconfig */,
+				B1694D6B2981CC066FAD9814 /* Pods-HoloMusicUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FFD0E414223A5C61002F4FAD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFD0E415223A5CA7002F4FAD /* SongsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FFD0E417223A5EE3002F4FAD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FFD0E418223A5F20002F4FAD /* Common.swift */,
+				FFD0E41B223A61CF002F4FAD /* Enum.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FFD0E41D223A626E002F4FAD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FFD0E41E223A62EC002F4FAD /* DataViewMdel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FFF35C4B223785C8000C3A1C = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +182,8 @@
 				FFF35C6B223785CF000C3A1C /* HoloMusicTests */,
 				FFF35C76223785CF000C3A1C /* HoloMusicUITests */,
 				FFF35C55223785C8000C3A1C /* Products */,
+				C44766CC4A005C5FEB0D81F6 /* Pods */,
+				6D43C1CAC5B3FF66873137E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,9 +200,14 @@
 		FFF35C56223785C8000C3A1C /* HoloMusic */ = {
 			isa = PBXGroup;
 			children = (
+				FFD0E41D223A626E002F4FAD /* ViewModel */,
+				FFD0E417223A5EE3002F4FAD /* Common */,
+				FFD0E414223A5C61002F4FAD /* Model */,
+				FFF894A1223A541B00E1A809 /* ApiSever */,
 				FFF35C8D22378B9C000C3A1C /* View */,
 				FFF35C57223785C8000C3A1C /* AppDelegate.swift */,
 				FFF35C59223785C8000C3A1C /* ViewController.swift */,
+				FF5267AC223A37DF009EC8F4 /* Mp3ViewController.swift */,
 				FFF35CA022379EA9000C3A1C /* DetailViewController.swift */,
 				FFF35C5B223785C8000C3A1C /* Main.storyboard */,
 				FFF35C5E223785CE000C3A1C /* Assets.xcassets */,
@@ -168,14 +246,20 @@
 		FFF35C8D22378B9C000C3A1C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FFF35C8922378B96000C3A1C /* HeaderTableCell.swift */,
-				FFF35C8A22378B96000C3A1C /* HeaderTableCell.xib */,
 				FFF35C8E22378C44000C3A1C /* DetailTableCell.swift */,
 				FFF35C8F22378C44000C3A1C /* DetailTableCell.xib */,
 				FFCB447C223825C3000D8483 /* CollectionCell.swift */,
 				FFCB447D223825C3000D8483 /* CollectionCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FFF894A1223A541B00E1A809 /* ApiSever */ = {
+			isa = PBXGroup;
+			children = (
+				FFD0E412223A5B0A002F4FAD /* APIService.swift */,
+			);
+			path = ApiSever;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFF35C7C223785CF000C3A1C /* Build configuration list for PBXNativeTarget "HoloMusic" */;
 			buildPhases = (
+				35CA5DE67B03EDB9960E4D6F /* [CP] Check Pods Manifest.lock */,
 				FFF35C50223785C8000C3A1C /* Sources */,
 				FFF35C51223785C8000C3A1C /* Frameworks */,
 				FFF35C52223785C8000C3A1C /* Resources */,
+				552BA9F4889E179237533D48 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -202,6 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFF35C7F223785CF000C3A1C /* Build configuration list for PBXNativeTarget "HoloMusicTests" */;
 			buildPhases = (
+				15EFAEB48FB367EB51EE95F4 /* [CP] Check Pods Manifest.lock */,
 				FFF35C64223785CF000C3A1C /* Sources */,
 				FFF35C65223785CF000C3A1C /* Frameworks */,
 				FFF35C66223785CF000C3A1C /* Resources */,
@@ -220,6 +307,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFF35C82223785CF000C3A1C /* Build configuration list for PBXNativeTarget "HoloMusicUITests" */;
 			buildPhases = (
+				EEAEFE2550324D3AD99D9DB5 /* [CP] Check Pods Manifest.lock */,
 				FFF35C6F223785CF000C3A1C /* Sources */,
 				FFF35C70223785CF000C3A1C /* Frameworks */,
 				FFF35C71223785CF000C3A1C /* Resources */,
@@ -283,7 +371,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFF35C62223785CE000C3A1C /* LaunchScreen.storyboard in Resources */,
-				FFF35C8C22378B96000C3A1C /* HeaderTableCell.xib in Resources */,
 				FFF35C5F223785CE000C3A1C /* Assets.xcassets in Resources */,
 				FFCB447F223825C3000D8483 /* CollectionCell.xib in Resources */,
 				FFF35C9122378C45000C3A1C /* DetailTableCell.xib in Resources */,
@@ -315,16 +402,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15EFAEB48FB367EB51EE95F4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloMusicTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35CA5DE67B03EDB9960E4D6F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		552BA9F4889E179237533D48 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoloMusic/Pods-HoloMusic-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoloMusic/Pods-HoloMusic-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HoloMusic/Pods-HoloMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEAEFE2550324D3AD99D9DB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HoloMusicUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FFF35C50223785C8000C3A1C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFD0E41F223A62EC002F4FAD /* DataViewMdel.swift in Sources */,
 				FFF35C5A223785C8000C3A1C /* ViewController.swift in Sources */,
-				FFF35C8B22378B96000C3A1C /* HeaderTableCell.swift in Sources */,
+				FF5267AD223A37DF009EC8F4 /* Mp3ViewController.swift in Sources */,
 				FFF35CA122379EA9000C3A1C /* DetailViewController.swift in Sources */,
+				FFD0E41C223A61D0002F4FAD /* Enum.swift in Sources */,
 				FFF35C58223785C8000C3A1C /* AppDelegate.swift in Sources */,
+				FFD0E416223A5CA7002F4FAD /* SongsModel.swift in Sources */,
 				FFF35C9022378C45000C3A1C /* DetailTableCell.swift in Sources */,
+				FFD0E413223A5B0A002F4FAD /* APIService.swift in Sources */,
+				FFD0E419223A5F20002F4FAD /* Common.swift in Sources */,
 				FFCB447E223825C3000D8483 /* CollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -498,6 +676,7 @@
 		};
 		FFF35C7D223785CF000C3A1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09492C0486E4D5F62A0F5490 /* Pods-HoloMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +696,7 @@
 		};
 		FFF35C7E223785CF000C3A1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A06A123AB6E85CFC4F2E5F00 /* Pods-HoloMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +716,7 @@
 		};
 		FFF35C80223785CF000C3A1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7378C7C25E9CF3E47BD37D4D /* Pods-HoloMusicTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +738,7 @@
 		};
 		FFF35C81223785CF000C3A1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2B8E8F7DFB391CAE9054260 /* Pods-HoloMusicTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -578,6 +760,7 @@
 		};
 		FFF35C83223785CF000C3A1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E4C0E9252E9786DB2E878DE /* Pods-HoloMusicUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -598,6 +781,7 @@
 		};
 		FFF35C84223785CF000C3A1C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1694D6B2981CC066FAD9814 /* Pods-HoloMusicUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
