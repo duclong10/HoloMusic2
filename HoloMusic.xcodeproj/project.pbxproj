@@ -11,6 +11,7 @@
 		CC26145515D3369769F73940 /* Pods_HoloMusicUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDD62E50C10572E0978EB903 /* Pods_HoloMusicUITests.framework */; };
 		F3E3B108E9C6F8CE5CA0AB43 /* Pods_HoloMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF39C34BC072822C903D630F /* Pods_HoloMusic.framework */; };
 		FF5267AD223A37DF009EC8F4 /* Mp3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5267AC223A37DF009EC8F4 /* Mp3ViewController.swift */; };
+		FF59C057223E573900B84402 /* asdf.m in Sources */ = {isa = PBXBuildFile; fileRef = FF59C056223E573900B84402 /* asdf.m */; };
 		FFCB447E223825C3000D8483 /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCB447C223825C3000D8483 /* CollectionCell.swift */; };
 		FFCB447F223825C3000D8483 /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFCB447D223825C3000D8483 /* CollectionCell.xib */; };
 		FFD0E413223A5B0A002F4FAD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD0E412223A5B0A002F4FAD /* APIService.swift */; };
@@ -35,7 +36,6 @@
 		FFF35C9B22378CEC000C3A1C /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C9522378CEC000C3A1C /* 2.png */; };
 		FFF35C9C22378CEC000C3A1C /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C9622378CEC000C3A1C /* 3.png */; };
 		FFF35C9D22378CEC000C3A1C /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = FFF35C9722378CEC000C3A1C /* 6.png */; };
-		FFF35CA122379EA9000C3A1C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFF35CA022379EA9000C3A1C /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +66,8 @@
 		EDD62E50C10572E0978EB903 /* Pods_HoloMusicUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloMusicUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF39C34BC072822C903D630F /* Pods_HoloMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5267AC223A37DF009EC8F4 /* Mp3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mp3ViewController.swift; sourceTree = "<group>"; };
+		FF59C055223E573900B84402 /* HoloMusic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HoloMusic-Bridging-Header.h"; sourceTree = "<group>"; };
+		FF59C056223E573900B84402 /* asdf.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = asdf.m; sourceTree = "<group>"; };
 		FFCB447C223825C3000D8483 /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		FFCB447D223825C3000D8483 /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 		FFD0E412223A5B0A002F4FAD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -96,7 +98,6 @@
 		FFF35C9522378CEC000C3A1C /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
 		FFF35C9622378CEC000C3A1C /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		FFF35C9722378CEC000C3A1C /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
-		FFF35CA022379EA9000C3A1C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +151,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FF2ED9DF223F497500E7A1D2 /* Controler */ = {
+			isa = PBXGroup;
+			children = (
+				FFF35C59223785C8000C3A1C /* ViewController.swift */,
+				FF5267AC223A37DF009EC8F4 /* Mp3ViewController.swift */,
+			);
+			path = Controler;
+			sourceTree = "<group>";
+		};
 		FFD0E414223A5C61002F4FAD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,19 +210,19 @@
 		FFF35C56223785C8000C3A1C /* HoloMusic */ = {
 			isa = PBXGroup;
 			children = (
+				FF2ED9DF223F497500E7A1D2 /* Controler */,
 				FFD0E41D223A626E002F4FAD /* ViewModel */,
 				FFD0E417223A5EE3002F4FAD /* Common */,
 				FFD0E414223A5C61002F4FAD /* Model */,
 				FFF894A1223A541B00E1A809 /* ApiSever */,
 				FFF35C8D22378B9C000C3A1C /* View */,
 				FFF35C57223785C8000C3A1C /* AppDelegate.swift */,
-				FFF35C59223785C8000C3A1C /* ViewController.swift */,
-				FF5267AC223A37DF009EC8F4 /* Mp3ViewController.swift */,
-				FFF35CA022379EA9000C3A1C /* DetailViewController.swift */,
 				FFF35C5B223785C8000C3A1C /* Main.storyboard */,
 				FFF35C5E223785CE000C3A1C /* Assets.xcassets */,
 				FFF35C60223785CE000C3A1C /* LaunchScreen.storyboard */,
 				FFF35C63223785CE000C3A1C /* Info.plist */,
+				FF59C056223E573900B84402 /* asdf.m */,
+				FF59C055223E573900B84402 /* HoloMusic-Bridging-Header.h */,
 			);
 			path = HoloMusic;
 			sourceTree = "<group>";
@@ -334,6 +344,7 @@
 				TargetAttributes = {
 					FFF35C53223785C8000C3A1C = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					FFF35C67223785CF000C3A1C = {
 						CreatedOnToolsVersion = 10.1;
@@ -496,10 +507,10 @@
 				FFD0E41F223A62EC002F4FAD /* DataViewMdel.swift in Sources */,
 				FFF35C5A223785C8000C3A1C /* ViewController.swift in Sources */,
 				FF5267AD223A37DF009EC8F4 /* Mp3ViewController.swift in Sources */,
-				FFF35CA122379EA9000C3A1C /* DetailViewController.swift in Sources */,
 				FFD0E41C223A61D0002F4FAD /* Enum.swift in Sources */,
 				FFF35C58223785C8000C3A1C /* AppDelegate.swift in Sources */,
 				FFD0E416223A5CA7002F4FAD /* SongsModel.swift in Sources */,
+				FF59C057223E573900B84402 /* asdf.m in Sources */,
 				FFF35C9022378C45000C3A1C /* DetailTableCell.swift in Sources */,
 				FFD0E413223A5B0A002F4FAD /* APIService.swift in Sources */,
 				FFD0E419223A5F20002F4FAD /* Common.swift in Sources */,
@@ -679,6 +690,7 @@
 			baseConfigurationReference = 09492C0486E4D5F62A0F5490 /* Pods-HoloMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N5TAL72TL;
 				INFOPLIST_FILE = HoloMusic/Info.plist;
@@ -689,6 +701,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bigsun.HoloMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HoloMusic/HoloMusic-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -699,6 +713,7 @@
 			baseConfigurationReference = A06A123AB6E85CFC4F2E5F00 /* Pods-HoloMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2N5TAL72TL;
 				INFOPLIST_FILE = HoloMusic/Info.plist;
@@ -709,6 +724,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = bigsun.HoloMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "HoloMusic/HoloMusic-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

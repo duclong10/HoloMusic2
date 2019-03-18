@@ -21,7 +21,7 @@ target 'HoloMusic' do
   end
 
   pod 'Alamofire', '~> 4.5'
-  pod 'SDWebImage'
+  pod 'SDWebImage', '~> 4.0'
 
 
 end

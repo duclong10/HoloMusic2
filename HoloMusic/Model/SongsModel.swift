@@ -14,9 +14,16 @@ struct SongModel {
     var avatar : String = ""
     
     init(json: [String:Any]) {
-        self.name = json["name"] as! String
-        self.singer = json["singer"] as! String
-        self.avatar = json["avatar"] as! String
+        if json["name"] != nil{
+             self.name = json["name"] as! String
+        }
+        if json["singer"] != nil{
+            self.singer = json["singer"] as! String
+        }
+        if json["avatar"] != nil{
+            self.avatar = json["avatar"] as! String
+        }
+        
         
     }
 }

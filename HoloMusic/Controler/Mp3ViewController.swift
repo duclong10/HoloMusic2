@@ -11,9 +11,12 @@ import UIKit
 class Mp3ViewController: UIViewController {
     var playLists : SongModel?
     
+    @IBOutlet weak var lblS1: UILabel!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var img: UIImageView!
     
+    @IBOutlet weak var lblS3: UILabel!
+    @IBOutlet weak var lblS2: UILabel!
     @IBOutlet weak var lblSinger: UILabel!
     
     override func viewDidLoad() {
@@ -25,6 +28,9 @@ class Mp3ViewController: UIViewController {
         img.sd_setImage(with: URL(string: playLists!.avatar))
         lblSinger.text = playLists?.singer
         lblName.text = playLists?.name
+        lblS3.text = playLists?.singer
+        lblS2.text = playLists?.name
+        
     }
     @IBAction func btnBack(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)

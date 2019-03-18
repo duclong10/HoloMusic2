@@ -18,8 +18,9 @@ struct Song {
 
 class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet weak var ViewSeach: UIView!
     var number = ["1","2","3","4","5","6"]
-    var imgMp3 = ["h1","h2","h3","h4","h5","h6"]
+    var imgMp3 = ["h1","h2","h3","h4","h5","h6","h1","h2","h3","h4","h5","h6","h3","h4","h5","h6","h3","h4","h5","h3"]
     var lstPlaylis = [SongModel]()
     
 //    var data: [Song] = []
@@ -30,6 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
         tableview.delegate = self
         tableview.dataSource = self
         getApi(prams: ["":""])
+        ViewSeach.layer.cornerRadius = 10
        
         tableview.register(UINib (nibName: "DetailTableCell", bundle: nil), forCellReuseIdentifier: "DetailTableCell")
     }
@@ -43,18 +45,21 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if lstPlaylis != nil{
-            return lstPlaylis.count
-        }
-        return 0
+        return lstPlaylis.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailTableCell", for: indexPath) as! DetailTableCell
         let obj = lstPlaylis[indexPath.row]
         cell.lblCs.text = obj.singer
         cell.lblName.text = obj.name
-        cell.img.sd_setImage(with: URL(string: obj.avatar))
-        cell.lblNuber.text = "\(indexPath.row + 1)"
+//        cell.img.sd_setImage(with: URL(string: obj.avatar))
+        cell.img.image = UIImage(named: imgMp3[indexPath.row])
+        
+        if indexPath.row < 10{
+            cell.lblNuber.text = "0"+"\(indexPath.row )"
+        }else{
+            cell.lblNuber.text = "\(indexPath.row )"
+        }
         
         return cell
     }
@@ -70,8 +75,8 @@ class ViewController: UIViewController, UITableViewDataSource,UITableViewDelegat
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//        vc.playLists = self.lstPlaylis[indexPath.row]
+        let vc = sb.instantiateViewController(withIdentifier: "Mp3ViewController") as! Mp3ViewController
+        vc.playLists = self.lstPlaylis[indexPath.row]
         self.navigationController?.present(vc, animated: true, completion: nil)
 
     }
